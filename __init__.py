@@ -15,7 +15,7 @@ bl_info = {
     'warning': "",
     'wiki_url': "https://github.com/saidenka/Blender-AnimeHairSupporter",
     'tracker_url': "https://github.com/saidenka/Blender-AnimeHairSupporter",
-    'category': "Tools"
+    'category': "Tool"
 }
 
 # サブスクリプト群をインポート
