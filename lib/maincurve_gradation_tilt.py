@@ -9,19 +9,19 @@ class ahs_maincurve_gradation_tilt(bpy.types.Operator):
     bl_description = "選択カーブをゆるやかにひねる/傾ける"
     bl_options = {'REGISTER', 'UNDO'}
 
-    is_tilt = bpy.props.BoolProperty(name="傾き", default=True)
-    is_radius = bpy.props.BoolProperty(name="半径", default=False)
-    is_weight_softbody = bpy.props.BoolProperty(name="ウェイト", default=False)
+    is_tilt: bpy.props.BoolProperty(name="傾き", default=True)
+    is_radius: bpy.props.BoolProperty(name="半径", default=False)
+    is_weight_softbody: bpy.props.BoolProperty(name="ウェイト", default=False)
 
-    begin_ratio = bpy.props.IntProperty(name="始点", default=33, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
-    begin_tilt = bpy.props.FloatProperty(name="傾き", default=0, min=math.radians(-360), max=math.radians(360), soft_min=math.radians(-360), soft_max=math.radians(360), step=3, precision=0, subtype='ANGLE', unit='ROTATION')
-    begin_radius = bpy.props.FloatProperty(name="半径", default=1, min=0, max=10, soft_min=0, soft_max=10, step=3, precision=2)
-    begin_weight_softbody = bpy.props.IntProperty(name="ウェイト", default=100, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
+    begin_ratio: bpy.props.IntProperty(name="始点", default=33, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
+    begin_tilt: bpy.props.FloatProperty(name="傾き", default=0, min=math.radians(-360), max=math.radians(360), soft_min=math.radians(-360), soft_max=math.radians(360), step=3, precision=0, subtype='ANGLE', unit='ROTATION')
+    begin_radius: bpy.props.FloatProperty(name="半径", default=1, min=0, max=10, soft_min=0, soft_max=10, step=3, precision=2)
+    begin_weight_softbody: bpy.props.IntProperty(name="ウェイト", default=100, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
 
-    end_ratio = bpy.props.IntProperty(name="終点", default=100, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
-    end_tilt = bpy.props.FloatProperty(name="傾き", default=0, min=math.radians(-360), max=math.radians(360), soft_min=math.radians(-360), soft_max=math.radians(360), step=3, precision=0, subtype='ANGLE', unit='ROTATION')
-    end_radius = bpy.props.FloatProperty(name="半径", default=0, min=0, max=10, soft_min=0, soft_max=10, step=3, precision=2)
-    end_weight_softbody = bpy.props.IntProperty(name="ウェイト", default=0, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
+    end_ratio: bpy.props.IntProperty(name="終点", default=100, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
+    end_tilt: bpy.props.FloatProperty(name="傾き", default=0, min=math.radians(-360), max=math.radians(360), soft_min=math.radians(-360), soft_max=math.radians(360), step=3, precision=0, subtype='ANGLE', unit='ROTATION')
+    end_radius: bpy.props.FloatProperty(name="半径", default=0, min=0, max=10, soft_min=0, soft_max=10, step=3, precision=2)
+    end_weight_softbody: bpy.props.IntProperty(name="ウェイト", default=0, min=0, max=100, soft_min=0, soft_max=100, subtype='PERCENTAGE')
 
     items = [
         ('ABSOLUTE', "絶対", "", 'PREFERENCES', 1),

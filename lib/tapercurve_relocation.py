@@ -15,10 +15,10 @@ class ahs_tapercurve_relocation(bpy.types.Operator):
         ('BEVEL', "ベベル", "", 'SURFACE_NCIRCLE', 2),
         ('BOTH', "両方", "", 'ARROW_LEFTRIGHT', 3),
     ]
-    mode = bpy.props.EnumProperty(items=items, name="モード", default='BOTH')
+    mode: bpy.props.EnumProperty(items=items, name="モード", default='BOTH')
 
-    is_location = bpy.props.BoolProperty(name="位置", default=True)
-    is_rotation = bpy.props.BoolProperty(name="回転", default=True)
+    is_location: bpy.props.BoolProperty(name="位置", default=True)
+    is_rotation: bpy.props.BoolProperty(name="回転", default=True)
 
     @classmethod
     def poll(cls, context):

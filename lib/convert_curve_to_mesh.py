@@ -10,9 +10,9 @@ class ahs_convert_curve_to_mesh(bpy.types.Operator):
     bl_description = "選択中の肉付けしたカーブをメッシュに変換"
     bl_options = {'REGISTER', 'UNDO'}
 
-    is_join = bpy.props.BoolProperty(name="オブジェクトを統合", default=True)
-    is_remove_doubles = bpy.props.BoolProperty(name="重複頂点を削除", default=True)
-    is_uv_pack_islands = bpy.props.BoolProperty(name="UVの島を梱包", default=True)
+    is_join: bpy.props.BoolProperty(name="オブジェクトを統合", default=True)
+    is_remove_doubles: bpy.props.BoolProperty(name="重複頂点を削除", default=True)
+    is_uv_pack_islands: bpy.props.BoolProperty(name="UVの島を梱包", default=True)
 
     @classmethod
     def poll(cls, context):

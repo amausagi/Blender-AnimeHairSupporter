@@ -13,7 +13,7 @@ class ahs_tapercurve_remove_alones(bpy.types.Operator):
         ('BEVEL', "ベベル", "", 'SURFACE_NCIRCLE', 2),
         ('BOTH', "両方", "", 'ARROW_LEFTRIGHT', 3),
     ]
-    mode = bpy.props.EnumProperty(items=items, name="モード", default='BOTH')
+    mode: bpy.props.EnumProperty(items=items, name="モード", default='BOTH')
 
     @classmethod
     def poll(cls, context):

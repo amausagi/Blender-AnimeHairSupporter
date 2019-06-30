@@ -54,9 +54,9 @@ for name in module_names:
 
 # パネルの設定
 class AHS_Props(bpy.types.PropertyGroup):
-    maincurve_expand = bpy.props.BoolProperty(name="メインパネルを展開", default=True)
-    tapercurve_expand = bpy.props.BoolProperty(name="テーパーパネルを展開", default=True)
-    bevelcurve_expand = bpy.props.BoolProperty(name="ベベルパネルを展開", default=True)
+    maincurve_expand: bpy.props.BoolProperty(name="メインパネルを展開", default=True)
+    tapercurve_expand: bpy.props.BoolProperty(name="テーパーパネルを展開", default=True)
+    bevelcurve_expand: bpy.props.BoolProperty(name="ベベルパネルを展開", default=True)
 
 # モジュールからクラスの取得
 classes = [AHS_Props]
